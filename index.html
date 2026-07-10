@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AVN Grand | Luxury Stay in Ranchi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9ff",
+                    "outline": "#76777d",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-tertiary-fixed-variant": "#454746",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#bec6e0",
+                    "surface-tint": "#565e74",
+                    "on-surface": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-bright": "#f8f9ff",
+                    "outline-variant": "#c6c6cd",
+                    "on-background": "#0b1c30",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary-container": "#745c00",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "primary-container": "#131b2e",
+                    "tertiary-fixed-dim": "#c6c7c5",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#000000",
+                    "surface": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary-container": "#1a1c1b",
+                    "secondary-fixed": "#ffe088",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "secondary": "#735c00",
+                    "on-primary-container": "#7c839b",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#e2e3e1",
+                    "secondary-container": "#fed65b",
+                    "on-tertiary-container": "#838483",
+                    "on-tertiary-fixed": "#1a1c1b",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-high": "#dce9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">AVN Grand</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary transition-colors duration-300" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Rooms</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Restaurant</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Banquet</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Amenities</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps tracking-widest scale-95 active:opacity-80 transition-all uppercase">
+                Book Your Stay
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden md:py-32">
+<div class="absolute inset-0 bg-primary/60 z-10"></div>
+<div class="absolute inset-0 w-full h-full" data-alt="A grand luxury hotel lobby with soaring marble columns, crystal chandeliers, and polished gold accents. The space is filled with soft, warm golden light filtering through high windows, creating a welcoming and prestigious atmosphere. Deep navy blue velvet furniture adds a touch of modern luxury to the traditional architecture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwar4mxDsUk4_YKmVVXqiUZXwTsin3SnWoQL8vHDVzbCTIM8Y49FTmdRyD-LgM1P-ME_HjrEuPjgez7epOUM2iu-sVi2GhTuKOXyttD-HDdiTetcolT1uYI5pbuFv-sVwhyIp_1qHaLOAiH8TeBd_Qi8kIe9DYiPx0qwgMY2FuimBPk-cjKMNEbkMd1_s1R846QgddXNYZKHh6e0T36mqV9XVF5nmwpQ7gfYaGcxcTZU6_oBSMXzJ8')"></div>
+<div class="relative z-20 text-center px-margin-mobile max-w-4xl fade-up">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6 tracking-tight">Luxury Stay in the Heart of Ranchi</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-10 max-w-2xl mx-auto">Experience unparalleled comfort and premium hospitality where business meets leisure in a symphony of elegance.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-label-caps tracking-widest hover:bg-secondary-fixed transition-all uppercase md:px-12 md:py-5 hover:-translate-y-1 shadow-lg">Book Now</button>
+<button class="border border-white text-white px-8 py-4 rounded-full font-label-caps tracking-widest hover:bg-white/10 transition-all uppercase md:px-12 md:py-5 hover:-translate-y-1 hover:bg-white/20">Explore Rooms</button>
+</div>
+</div>
+<!-- Floating Booking Card -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-full max-w-container-max px-margin-mobile z-30 hidden md:block">
+<div class="glass-card p-8 rounded-xl shadow-2xl border border-secondary-fixed/30 grid grid-cols-4 gap-6 items-end backdrop-blur-2xl bg-white/80 border-white/20">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant block">Check In</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-secondary focus:ring-0 py-2 outline-none font-body-md text-on-surface" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant block">Check Out</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-secondary focus:ring-0 py-2 outline-none font-body-md text-on-surface" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant block">Guests</label>
+<select class="w-full bg-transparent border-b border-outline-variant focus:border-secondary focus:ring-0 py-2 outline-none font-body-md text-on-surface">
+<option>1 Guest</option>
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4+ Guests</option>
+</select>
+</div>
+<button class="bg-primary text-on-primary w-full py-4 rounded-lg font-label-caps tracking-widest hover:bg-primary-container transition-all uppercase">Search Rooms</button>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="pt-48 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 fade-up">
+<span class="font-label-caps text-secondary tracking-[0.3em] uppercase">Excellence Defined</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mt-4">The AVN Grand Experience</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="text-center p-8 bg-surface-container-lowest rounded-2xl hover:shadow-lg transition-shadow fade-up group">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary">location_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Prime Location</h3>
+<p class="text-on-surface-variant">Located in the vibrant heart of Ranchi, minutes away from major hubs.</p>
+</div>
+<div class="text-center p-8 bg-surface-container-lowest rounded-2xl hover:shadow-lg transition-shadow fade-up group">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary">hotel</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Premium Rooms</h3>
+<p class="text-on-surface-variant">Elegantly designed spaces with state-of-the-art modern amenities.</p>
+</div>
+<div class="text-center p-8 bg-surface-container-lowest rounded-2xl hover:shadow-lg transition-shadow fade-up group">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary">restaurant</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Fine Dining</h3>
+<p class="text-on-surface-variant">Exquisite multi-cuisine restaurant serving curated local and global flavors.</p>
+</div>
+<div class="text-center p-8 bg-surface-container-lowest rounded-2xl hover:shadow-lg transition-shadow fade-up group">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Top Security</h3>
+<p class="text-on-surface-variant">Round-the-clock security and personalized guest concierge services.</p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative fade-up">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A candid shot of professional hotel staff in elegant uniforms welcoming a guest into a bright, airy lobby. The composition is clean and modern, focusing on the high-end hospitality and personalized service. Natural light floods the space, highlighting the pristine marble and warm wood textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgDH4acrpcpm2CY-9C0hWlAsrbR1YY0KsvQsuFg-qZD8DGUKoxJ3IAatYctVnITqWp32glOe7cgoU6jMhFu_5IJ4jzIZkz2nP6Dy0bLRoRQirCxRfFBnob0gj-tqZOzT2bMXAa6qCZZbap_emu2Om7ol5pHz1GJLe36m0EoswnXZeHxguuwvlgH0hC4ZPgmk5YUXqnJWLGMupiQH_FRU2WeIdKtk_ZkA7TUVFP-JeTwBnZ9Iw_nD7I"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-primary p-12 rounded-3xl text-white shadow-xl hidden md:block">
+<div class="text-5xl font-display-lg mb-2" id="guest-count">3000+</div>
+<div class="font-label-caps tracking-widest opacity-70 uppercase">Happy Guests</div>
+</div>
+</div>
+<div class="space-y-8 fade-up">
+<span class="font-label-caps text-secondary tracking-[0.3em] uppercase">Since 2012</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl">A Legacy of Comfort and Sophistication</h2>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                    At AVN Grand, we believe every stay should be an event. From our hand-picked interiors to our signature hospitality, we've created a sanctuary in Ranchi that caters to the sophisticated needs of modern travelers.
+                </p>
+<div class="grid grid-cols-2 gap-8 py-4">
+<div>
+<div class="text-3xl font-display-lg text-secondary mb-1">4.2/5</div>
+<div class="text-sm font-label-caps text-on-surface-variant uppercase">Guest Rating</div>
+</div>
+<div>
+<div class="text-3xl font-display-lg text-secondary mb-1">100+</div>
+<div class="text-sm font-label-caps text-on-surface-variant uppercase">Premium Rooms</div>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-caps tracking-widest uppercase hover:opacity-90 transition-all">Learn More About Us</button>
+</div>
+</div>
+</section>
+<!-- Rooms Preview -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16 fade-up">
+<div>
+<span class="font-label-caps text-secondary tracking-[0.3em] uppercase">Your Sanctuary</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mt-4">Luxury Accommodations</h2>
+</div>
+<a class="font-label-caps text-primary border-b-2 border-primary pb-1 hidden md:block uppercase tracking-widest" href="#">View All Rooms</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Room 1 -->
+<div class="group fade-up bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A modern deluxe hotel room with a large king-sized bed, crisp white linens, and soft blue accent pillows. Large floor-to-ceiling windows overlook a cityscape at dusk. The room is styled with minimalist furniture, warm ambient lighting, and high-end materials like walnut wood and brushed brass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOB4xIfx8rIcoZM57SQP1PeHi7vDqfdCDNQDAbrsxdSELzUrf_nPHUEHBCLQ-hT75tvu9p9_4_Gj5LsivfwVY2Frq0eIC_XgQczEYm2gfizab67wS71oGlhABNWhDG81hJfhmkBV5qvb1j8CrkhnYf2ugiwKe9yEt5HYSslQVkSXsynLKoDXJVKGkxzFnUTQSJI-QCRM_ehl4J5liXejUd40rvQ0oJM8Hg612s1Z4oj0NWGQpWxQYe"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full font-label-caps text-secondary">FROM ₹4,500</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md mb-4">Deluxe Room</h3>
+<div class="flex gap-4 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 320 sqft</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> 2 Adults</div>
+</div>
+<button class="w-full py-4 border border-outline-variant group-hover:bg-primary group-hover:text-on-primary group-hover:border-primary transition-all rounded-xl font-label-caps tracking-widest uppercase">Book This Room</button>
+</div>
+</div>
+<!-- Room 2 -->
+<div class="group fade-up bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An executive hotel suite featuring a separate living area with a plush navy sofa, a modern workspace with a designer chair, and a view of the city. The decor is sleek and professional with monochromatic tones and golden decorative elements, perfectly balanced for the business traveler." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzS1cX9bGzJsYIUVZl8v2t-GF16151IxUHhkX9k9aOCp4DMdZf_T5VBkTrcwiogY07QQWU1Uy5ooZvLvtXg1i4dBNlNwwg-XK5GNB8ApDAOlJIz9H06P6d__Uz0XCuHbgDdOjAShJ8kBGe9jOOKmQwjUmfc_g6g2dFKev9uukRA0suiCA_2gqOyzGAEoeZRNm5e9nlcb8Rx_vF7eF26pqKesNHOebFWd0BwXH7UnlJgldWDO--z3ZA"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full font-label-caps text-secondary">FROM ₹6,000</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md mb-4">Executive Suite</h3>
+<div class="flex gap-4 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 450 sqft</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> 2 Adults</div>
+</div>
+<button class="w-full py-4 border border-outline-variant group-hover:bg-primary group-hover:text-on-primary group-hover:border-primary transition-all rounded-xl font-label-caps tracking-widest uppercase">Book This Room</button>
+</div>
+</div>
+<!-- Room 3 -->
+<div class="group fade-up bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
+<div class="relative overflow-hidden aspect-[4/3]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A breathtaking premium luxury suite with panoramic windows, a master bedroom featuring a four-poster bed, and a private dining area. The aesthetic is extremely high-end with marble floors, silk curtains, and bespoke designer lighting fixtures, creating an atmosphere of ultimate exclusivity and opulence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu_-Smues7nEmOAvG1jka3J6od3pM-tqm-d41aU5__FGpwpcKv-GC6JoesNp71hrsuziFl12wXzFH-uoelYBCJRHf2KnqudeShLJKfJBdJo4MzsEIH9yvKSYszL5QEg7L4iQF4hclcCp_8JnoppaCQq6z-tIIe8veWywML9qzHxjPd9uVFru-ZDE86jixWU6lYPcXjl5a4mHuU5ZyjbRoQd3LxKNdsIMh0SKVOIsTHHzCE8ZSEZ2Wm"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full font-label-caps text-secondary">FROM ₹12,000</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md mb-4">Presidential Suite</h3>
+<div class="flex gap-4 mb-6 text-on-surface-variant">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 850 sqft</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> 4 Adults</div>
+</div>
+<button class="w-full py-4 border border-outline-variant group-hover:bg-primary group-hover:text-on-primary group-hover:border-primary transition-all rounded-xl font-label-caps tracking-widest uppercase">Book This Room</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Restaurant Section -->
+<section class="relative py-32 overflow-hidden bg-primary">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A sophisticated fine-dining restaurant interior at night. Tables are impeccably set with crystal glassware and silver cutlery. Mood lighting creates a dramatic, intimate atmosphere. Chefs can be seen in the background of an open kitchen preparing vibrant gourmet dishes. The style is dark, moody, and ultra-luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIyN0C14ytraQeXwBAP_R5rBv5kZjnXhoE1hnNn7zI1yyFVVcsWG300cXvdW2eXu5bU5Je59DIGB3NKdjRGZOnh3pB8awUsOPpLKI8Im8KMHjl8hljaKxBPZH04PHSbNqXzoEJzjrsmI2iK55_xn0i2GdlTYM4ehkmCKRomuzBeQGy-iYeo58e5aixpzOTDIbr4yFD2oEmMagc0XOOq0DnCKbsQnQ31bEEymgO6pl7pqinCWqS0jn7"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="fade-up">
+<span class="font-label-caps text-secondary-fixed tracking-[0.3em] uppercase">Culinary Arts</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mt-4 mb-8">Taste Excellence</h2>
+<p class="text-white/80 font-body-lg mb-10 leading-relaxed">
+                    Savor a symphony of flavors at our multi-cuisine restaurant. From traditional Jharkhand delicacies to global gourmet favorites, every dish is a masterpiece crafted by our award-winning chefs.
+                </p>
+<div class="flex gap-8 mb-12">
+<div class="text-center">
+<div class="text-secondary-fixed font-display-lg text-4xl mb-2">08am</div>
+<div class="font-label-caps text-white/60 uppercase">Breakfast</div>
+</div>
+<div class="text-center">
+<div class="text-secondary-fixed font-display-lg text-4xl mb-2">11pm</div>
+<div class="font-label-caps text-white/60 uppercase">Last Order</div>
+</div>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-label-caps tracking-widest uppercase hover:scale-105 transition-all">Explore Menu</button>
+</div>
+<div class="hidden md:block fade-up">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="rounded-2xl overflow-hidden aspect-square"><img class="w-full h-full object-cover" data-alt="A close-up shot of an artistic gourmet dessert plate featuring intricate chocolate work, edible gold leaf, and vibrant fruit coulis. The presentation is modern and minimalistic, photographed with a shallow depth of field to emphasize the culinary craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBu56jA1I1umWF1snkfu5kTq_yOS-I5pjNzevZLMyuvhgapGoTenUYRqh4tfthbzYBLx-XadXGPxutJDRVVvdPOp8oBHKSkYXH033lxOUxrBVrJy7jmxF7-QovlRs3tYNhSQIvae5Fd9Q_uvu6Vg6uCX8y5WBfQrBNNin9LO_0d9HLOPThk4xjZLUdVJrtUoujX3zU0JvwdqMpBCTnGVDWd_WSO9V9E0D6ITCPdjcOgLNgAJYYPm_b"/></div>
+<div class="rounded-2xl overflow-hidden aspect-[3/4]"><img class="w-full h-full object-cover" data-alt="A master chef carefully plating a high-end savory dish, using tweezers to place micro-greens. The kitchen background is clean stainless steel with warm spotlighting, capturing the precision and dedication of luxury culinary arts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZZZpMVqAwwhSi76Nh1P37Jq3HlDXyfz4TMT2FDQRcp3rO9cMZVP-nulNGeTqN92MHqrOPztXjhtrYCtqOVaVaK6cAgtl66CCXOWhawLwZZ5ThnfMQVvOjZaIY1RDPfQ_TVod9mNcuF-HMyt-FP-QEVqNHdvSpICX9M6FMPbTZOR7fBDnY727VJDyJ1J_0j0VhC3HovDjZIZYNuayqDZYafNcLKkYCD7zghoj-vDYLBYK4WDPhsP5f"/></div>
+</div>
+<div class="space-y-4">
+<div class="rounded-2xl overflow-hidden aspect-[3/4]"><img class="w-full h-full object-cover" data-alt="Two crystal wine glasses being clinked together in a toast, with the blurred background of a luxury restaurant's ambient lighting and golden decor. The focus is sharp on the sparkling wine and the high-quality glass texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHNfCTE9NcOoxfubokBD_EVghXMh8kG9FvKg4D_ZwxQnKnGoyb6-WxWakqiRYX6u_HW6Bzn6KcgI_x8xR0tBRBow_Yb209_uhiREhmX_ig8IByW15rlsWKRGSpyPVAfdGG3xkIVkzLogd6qi4CshubVrPM3-bkmZYEDDEOUZ8sstaS_Tirj-beZkC_v0nCl4B6R9ZTAUOrO863oSx_Ia4Rd4eECoQf9hhVuy7RCJevLMrJssQEZIcH"/></div>
+<div class="rounded-2xl overflow-hidden aspect-square"><img class="w-full h-full object-cover" data-alt="A beautifully presented traditional Indian thali reimagined for luxury dining, served on a heavy silver platter with small copper bowls. The food is vibrant and colorful, set against a dark textured tabletop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZtOl17frTEEE_skFX4v9m1Fvi8PqSQTgM6FGen2cMjlTFlzDr9bW1VSSiAD1PpwGOKtc96acl8upO6ZgXCwdF2kaRt1MlebEYaXNv5U9n17PkQjpV6uTsqxHHS586sdlxSsIYQCGXqaFzg_JXUR1ooWHZ5ZUXyU1yiBPgsq2-FH50iJuI94kVS4RsINBnDutd1M1zR8WiEF6UJjcam-AoAE5Rhdm2tXkq7kvFc4OUqYKNUTC3sNjQ"/></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Banquet & Events -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-surface-container rounded-[3rem] overflow-hidden flex flex-col md:flex-row fade-up">
+<div class="w-full md:w-1/2 p-12 md:p-20 flex flex-col justify-center">
+<span class="font-label-caps text-secondary tracking-[0.3em] uppercase">Grand Celebrations</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mt-6 mb-8">Weddings &amp; Corporate Events</h2>
+<p class="text-on-surface-variant font-body-lg mb-10 leading-relaxed">
+                    Our versatile banquet halls provide the perfect backdrop for your most precious moments. From intimate corporate board meetings to grand wedding receptions for 500+ guests.
+                </p>
+<div class="space-y-4 mb-10">
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span>State-of-the-art Audio/Visual Equipment</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span>Customized Catering Packages</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span>Dedicated Event Planning Team</span>
+</div>
+</div>
+<button class="border-2 border-primary text-primary px-10 py-4 rounded-full font-label-caps tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-all self-start">Plan Your Event</button>
+</div>
+<div class="w-full md:w-1/2 min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="A grand ballroom decorated for a high-end wedding. Thousands of white orchids hang from the ceiling among crystal chandeliers. Tables are covered in silk cloths with tall gold centerpieces. The lighting is a soft lavender and warm gold, creating a magical and romantic fairytale setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk2VW7oeAB5RwlI2r4_JMvh_qTw4VDMsA3wYBXAwxeMMbTgqxYLrRNqEs-IDRWqoL_OsdyfmzKwScQUvBo_VnLr8c4vN78BLuy7_d1TywdRFxjtRZ0aJjJbGNvkPsZo4qkD7n2aKIYMuutJ-N7-CtARZEB4cU3R9HJ1qGFroTkzyuY2DiMh9AeFylo5ewPi7HK-5i9a_VPYym-CrjsY9Lzwm8mRVXsIJo6UU-w_QETHVDauSwlz1MN"/>
+</div>
+</div>
+</section>
+<!-- Amenities Grid -->
+<section class="py-24 bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 fade-up">
+<span class="font-label-caps text-secondary tracking-[0.3em] uppercase">Beyond The Room</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mt-4">Unrivaled Amenities</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="p-8 border border-outline-variant/30 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all fade-up">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">fitness_center</span>
+<h4 class="font-headline-md text-lg">Fitness Center</h4>
+</div>
+<div class="p-8 border border-outline-variant/30 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all fade-up">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">wifi</span>
+<h4 class="font-headline-md text-lg">High Speed WiFi</h4>
+</div>
+<div class="p-8 border border-outline-variant/30 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all fade-up">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">local_parking</span>
+<h4 class="font-headline-md text-lg">Valet Parking</h4>
+</div>
+<div class="p-8 border border-outline-variant/30 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all fade-up">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">spa</span>
+<h4 class="font-headline-md text-lg">Luxury Spa</h4>
+</div>
+<div class="p-8 border border-outline-variant/30 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all fade-up">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">business_center</span>
+<h4 class="font-headline-md text-lg">Business Hub</h4>
+</div>
+<div class="p-8 border border-outline-variant/30 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all fade-up">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">pool</span>
+<h4 class="font-headline-md text-lg">Rooftop Pool</h4>
+</div>
+<div class="p-8 border border-outline-variant/30 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all fade-up">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">local_laundry_service</span>
+<h4 class="font-headline-md text-lg">Laundry Service</h4>
+</div>
+<div class="p-8 border border-outline-variant/30 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all fade-up">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">concierge</span>
+<h4 class="font-headline-md text-lg">Concierge</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-high overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col items-center mb-16 fade-up">
+<span class="font-label-caps text-secondary tracking-[0.3em] uppercase">Voices of Joy</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mt-4">Guest Experiences</h2>
+</div>
+<div class="relative max-w-4xl mx-auto">
+<div class="flex transition-transform duration-1000 ease-in-out" id="testimonial-container">
+<div class="w-full shrink-0 px-8 text-center">
+<div class="text-secondary mb-8">
+<span class="material-symbols-outlined text-5xl">format_quote</span>
+</div>
+<p class="font-display-lg text-2xl md:text-3xl text-primary leading-relaxed italic mb-8">
+                            "The attention to detail at AVN Grand is remarkable. From the seamless check-in to the incredible dining experience, it's easily the best hotel in Ranchi."
+                        </p>
+<div class="font-label-caps tracking-widest text-on-surface">Aditya Sharma</div>
+<div class="text-xs text-on-surface-variant uppercase mt-1">Business Traveler</div>
+</div>
+</div>
+<!-- Simple Slider Dots -->
+<div class="flex justify-center gap-3 mt-12">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="py-24 px-margin-mobile">
+<div class="max-w-container-max mx-auto rounded-[3rem] relative overflow-hidden bg-primary p-12 md:p-24 text-center">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="A wide panoramic view of a luxury hotel exterior at night, with warm light glowing from the windows and architectural lights accenting the modern facade. The sky is a deep indigo with a few stars visible, creating a peaceful and inviting scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfjtwyLG5MaEqCxaM6S48L5n79IBHKz_bAZ8jIUa8NzsLwiJ_WfcwfJoHYJeCHrMa_TVLOZOt-HSxZECrUr3LB92f0X7cII3dUn3KAXOxOZF2Qd7GGHi4P3G3LnCcyqDy8zL1D-jwU7Hn1ekvHcjdy-oq3DDsmh39Ta8nQ0QSpVpd2tGs9oCyGE-lgRtP4fmBC2JbTGgd1YHkrAex0BaArkw3hfMg_Dzg6NDV5iNDW6yy7DyjnviPW"/>
+</div>
+<div class="relative z-10 fade-up">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8">Ready for a Comfortable Stay?</h2>
+<p class="text-white/70 font-body-lg max-w-2xl mx-auto mb-12">
+                    Book your luxury experience at Hotel AVN Grand today and enjoy exclusive member-only rates and benefits.
+                </p>
+<button class="bg-secondary-container text-on-secondary-container px-12 py-5 rounded-full font-label-caps tracking-widest uppercase hover:bg-secondary-fixed transition-all scale-110">Book Now &amp; Save 15%</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest w-full pt-20 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-display-lg text-headline-md text-surface dark:text-primary-fixed">AVN Grand</div>
+<p class="text-surface-variant opacity-80 font-body-md text-body-md">Redefining luxury in Ranchi with world-class hospitality and unmatched elegance.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-surface">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-surface">favorite</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-surface">mail</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-secondary-fixed uppercase tracking-widest">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Rooms</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Restaurant</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Events</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Gallery</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Policies</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-secondary-fixed uppercase tracking-widest">Contact Info</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">location_on</span>
+<span class="text-surface-variant opacity-80">Main Road, Ranchi, Jharkhand - 834001</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">phone</span>
+<span class="text-surface-variant opacity-80">+91 (651) 2345 678</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">mail</span>
+<span class="text-surface-variant opacity-80">reservations@avngrand.com</span>
+</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-secondary-fixed uppercase tracking-widest">Newsletter</h4>
+<p class="text-surface-variant opacity-80">Subscribe to receive exclusive offers and news.</p>
+<div class="flex">
+<input class="bg-white/5 border border-white/10 rounded-l-lg px-4 py-2 w-full focus:outline-none focus:border-secondary-fixed text-white" placeholder="Your Email" type="email"/>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-r-lg font-label-caps">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-white/10 text-center">
+<p class="text-surface-variant opacity-50 font-body-md text-body-md">© 2024 Hotel AVN Grand. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for Fade-Up animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Basic counter animation for stats
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start) + "+";
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const statElement = document.getElementById('guest-count');
+        const statObserver = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting) {
+                animateValue(statElement, 0, 3000, 2000);
+                statObserver.unobserve(statElement);
+            }
+        });
+        statObserver.observe(statElement);
+
+        // Header glassmorphism change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.add('shadow-sm');
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

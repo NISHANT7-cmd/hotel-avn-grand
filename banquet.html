@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Banquets &amp; Events | Hotel AVN Grand</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9ff",
+                    "outline": "#76777d",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-tertiary-fixed-variant": "#454746",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#bec6e0",
+                    "surface-tint": "#565e74",
+                    "on-surface": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-bright": "#f8f9ff",
+                    "outline-variant": "#c6c6cd",
+                    "on-background": "#0b1c30",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary-container": "#745c00",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "primary-container": "#131b2e",
+                    "tertiary-fixed-dim": "#c6c7c5",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#000000",
+                    "surface": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary-container": "#1a1c1b",
+                    "secondary-fixed": "#ffe088",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "secondary": "#735c00",
+                    "on-primary-container": "#7c839b",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#e2e3e1",
+                    "secondary-container": "#fed65b",
+                    "on-tertiary-container": "#838483",
+                    "on-tertiary-fixed": "#1a1c1b",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-high": "#dce9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(115, 92, 0, 0.1);
+        }
+        .masonry-grid {
+            columns: 1;
+        }
+        @media (min-width: 768px) { .masonry-grid { columns: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { columns: 3; } }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center px-6 md:px-16 py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">
+                AVN Grand
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="font-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Rooms</a>
+<a class="font-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Restaurant</a>
+<a class="font-body-md text-secondary font-bold border-b-2 border-secondary transition-colors duration-300" href="#">Banquet</a>
+<a class="font-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Gallery</a>
+<a class="font-body-md text-on-surface hover:text-secondary transition-colors duration-300" href="#">Amenities</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps scale-95 active:opacity-80 transition-all ml-4">
+                    Book Your Stay
+                </button>
+</div>
+<button class="md:hidden p-2 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[921px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-[10s] hover:scale-110" data-alt="An opulent and sprawling hotel banquet hall decorated for a high-end gala. The ceiling features multiple tiers of grand crystal chandeliers casting a warm golden glow. Round tables are dressed in crisp white linens with gold runners and ornate floral centerpieces. The overall aesthetic is one of spatial luxury, high-modern hospitality, and deep prestige with a palette of cream, gold, and deep navy accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPXGXBRPZDMeQf3ZIzNw3N81-r1yEidAPqPdND4cBAjnKWl8AY4ZvvIMLrVvUWUpVSU8kM5J51BUW6CdDLc2FvJ3RgbwoX6HEP-XrCmwNsGP7eFq_EJI_1XsurZavOM0xxqMWdUEnR-Su87jYMv8ZaeRT5Du0sQ0wj83CrDeS_kvXtkgUwJe_HcEKwfFE-uZ8u6KMXrbTgTXLLS8uHjlH5Nl8BUOLFJKDsBIp1bSAZ_9YrT0Jy7YS6')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary/80"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<span class="font-label-caps text-secondary-fixed tracking-[0.3em] mb-6 block opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">EXQUISITE VENUES</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8 opacity-0 animate-[fadeInUp_1s_ease-out_0.3s_forwards]">
+                Grand Celebrations
+            </h1>
+<p class="font-body-lg text-white/80 max-w-2xl mx-auto mb-10 opacity-0 animate-[fadeInUp_1s_ease-out_0.6s_forwards]">
+                From intimate gatherings to majestic galas, our bespoke event spaces in Ranchi provide the perfect canvas for your most significant milestones.
+            </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center opacity-0 animate-[fadeInUp_1s_ease-out_0.9s_forwards]">
+<a class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-label-caps hover:bg-secondary transition-all shadow-xl" href="#inquiry">
+                    PLAN YOUR EVENT
+                </a>
+<a class="border border-white/30 backdrop-blur-md text-white px-8 py-4 rounded-full font-label-caps hover:bg-white/10 transition-all" href="#spaces">
+                    VIEW CAPACITIES
+                </a>
+</div>
+</div>
+</header>
+<!-- Event Types (Bento Style) -->
+<section class="py-24 px-6 md:px-16 max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-xl mb-4">Sophisticated Spaces for Every Occasion</h2>
+<div class="w-24 h-1 bg-secondary-fixed mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto">
+<!-- Weddings -->
+<div class="md:col-span-8 group relative rounded-2xl overflow-hidden h-[500px] shadow-lg transition-transform duration-500 hover:-translate-y-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious wedding setup at a grand hotel. A beautifully draped mandap with soft white and blush roses stands against a minimalist glass wall. The lighting is ethereal and soft, reflecting the 'High-Modern Hospitality' style. Crystal chairs are arranged in a neat arc, emphasizing a premium, airy, and celebratory atmosphere with warm white and gold tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb1fsVnAiBNF1QCv92DHBM0AFYZ49Z3MKyBU0YyF7QfVh2NqzCD4M6MhgXk1YdDSGNt5a87A04gmQ2XJj-M0TEtxTCf5mxlfFr4rL8TWhEpiJ-DRmsmPC7ceqXOF7nk9HQDueuPJhrAjeQjsCNdhB5cZaKf8anGylMPFx4pm-nEax4aN7UswZnQZBrMRv7wdIpZbz55c3qq-NNHt5RVjRtI7sQsKZdPDSBrCrOkiJUEKR8SXlG1PV5')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="font-label-caps text-secondary-fixed mb-2 block">CELEBRATE LOVE</span>
+<h3 class="font-display-lg text-headline-xl text-white mb-4">Weddings &amp; Galas</h3>
+<p class="text-white/70 max-w-md font-body-md mb-6">Expert planning and majestic decor to turn your dream wedding into a timeless reality.</p>
+<button class="flex items-center gap-2 text-white font-label-caps border-b border-white/50 pb-1 group-hover:gap-4 transition-all">
+                        EXPLORE WEDDINGS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Corporate -->
+<div class="md:col-span-4 group relative rounded-2xl overflow-hidden h-[500px] shadow-lg transition-transform duration-500 hover:-translate-y-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A modern corporate conference room in a luxury hotel. A sleek dark wood table is surrounded by ergonomic black leather chairs. High-end audio-visual equipment including a large recessed screen and ceiling-mounted speakers are visible. The space is bright with large floor-to-ceiling windows showing a hint of the urban Ranchi landscape, evoking a professional and focused corporate mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaGD_jFeEpBfGoUXyE6tVm0qHrlVKoPjcdYAZfIG0sKkxdD7rxzjpUK0u9_tS52dcq4gDOeJSeLu6YWMcbld0Bo9gD48FjdihlR3rhWntfFWLwAdb3jAD6QIg059XpOxCyIB2ndTULgyBVexTdRPlklJ4w-eSYlgGHly_LOvP-2A2t85C0P5X0i_elrAA3jlCa_xyIWmuUrbofXsR2W_simpZZy5yhbppQPhQuqm667yQgMv2HX62y')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="font-label-caps text-secondary-fixed mb-2 block">INNOVATE</span>
+<h3 class="font-display-lg text-headline-md text-white mb-3">Corporate Meetings</h3>
+<p class="text-white/70 font-body-md mb-4">State-of-the-art tech and seamless service for board meetings and seminars.</p>
+</div>
+</div>
+<!-- Social Gatherings -->
+<div class="md:col-span-12 group relative rounded-2xl overflow-hidden h-[400px] shadow-lg transition-transform duration-500 hover:-translate-y-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="An intimate social gathering setup in a boutique lounge space. Small high-top cocktail tables with gold accents are scattered around a stylish bar. Subtle ambient lighting in warm ambers creates a cozy yet exclusive club atmosphere. The design is minimalist with glass partitions and soft gray textures, suitable for birthday parties or corporate mixers." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJM_ONtp_HSbV3bZiP6yMByML_kBoNbkMnJmX-bZRmVOX9QZw2wR5r-WD35Op7Ma0UE2udRshWJ2Ot_fjV1g6UZjcsKvKR-1vLeygSkmQChZSfSOrNdv6md8z-rlMaMgOlfLFLlb6ZWnQEOO4Kuk30VHHgOjxUMFWVgffh4uRTY-zCfPPDdjjxCsZ8su6gubXk87zsksM0dwWxeAgzCA1kU4W93GEGuudjr9Kk3hA1H-PrRU3hBhsu')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 flex flex-col md:flex-row md:items-end md:justify-between w-full">
+<div>
+<span class="font-label-caps text-secondary-fixed mb-2 block">RECONNECT</span>
+<h3 class="font-display-lg text-headline-xl text-white">Social Events</h3>
+</div>
+<p class="text-white/70 max-w-sm font-body-md mt-4 md:mt-0">From milestone birthdays to anniversary dinners, we host your most cherished private moments with impeccable style.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Capacity & Features Section -->
+<section class="py-24 bg-surface-container-low" id="spaces">
+<div class="max-w-container-max mx-auto px-6 md:px-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-lg text-headline-xl mb-6">Designed for Versatility</h2>
+<p class="font-body-lg text-on-surface-variant mb-10">
+                        Our venues are meticulously engineered to adapt to your specific needs. Whether you require a theater-style setup for a tech summit or a traditional banquet layout for a festive feast, we offer unmatched flexibility.
+                    </p>
+<div class="overflow-x-auto rounded-xl border border-outline-variant bg-surface">
+<table class="w-full text-left">
+<thead class="bg-primary text-on-primary font-label-caps">
+<tr>
+<th class="p-4">Venue Name</th>
+<th class="p-4">Sq. Ft.</th>
+<th class="p-4">Theater</th>
+<th class="p-4">Banquet</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30 text-on-surface">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-4 font-bold">The Grand Ballroom</td>
+<td class="p-4">5,500</td>
+<td class="p-4">500</td>
+<td class="p-4">350</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-4 font-bold">Royal Suite A</td>
+<td class="p-4">1,800</td>
+<td class="p-4">150</td>
+<td class="p-4">80</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-4 font-bold">Heritage Pavilion</td>
+<td class="p-4">3,200</td>
+<td class="p-4">250</td>
+<td class="p-4">180</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">settings_input_component</span>
+<h4 class="font-headline-md mb-2">Modern AV</h4>
+<p class="text-sm text-on-surface-variant">Built-in projection, 4K displays, and premium audio systems.</p>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">restaurant_menu</span>
+<h4 class="font-headline-md mb-2">Catering</h4>
+<p class="text-sm text-on-surface-variant">Custom menus from world-class chefs for any cuisine.</p>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">wifi</span>
+<h4 class="font-headline-md mb-2">Connectivity</h4>
+<p class="text-sm text-on-surface-variant">High-speed dedicated fiber for live streaming and calls.</p>
+</div>
+<div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">concierge</span>
+<h4 class="font-headline-md mb-2">Support</h4>
+<p class="text-sm text-on-surface-variant">Dedicated event manager assigned to every booking.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pinterest Gallery -->
+<section class="py-24 px-6 md:px-16 max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-xl mb-4">Capturing the Moments</h2>
+<p class="font-body-md text-on-surface-variant">A glimpse into the many celebrations we've had the honor of hosting.</p>
+</div>
+<div class="masonry-grid gap-6">
+<div class="masonry-item">
+<div class="rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A detailed photo of a wedding dinner table in a luxury hotel setting. Ivory candles of varying heights flicker amongst eucalyptus leaves and gold-rimmed plates. The lighting is extremely soft and moody, creating a serene and romantic atmosphere in a minimalist, modern light-mode hotel palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0_TklYWcpicJh8LarhNENdSoVNjwRqF8RHaHpULZJdsfCEQBvYZei4FsL3XWlW9pL13PdMcI2K1gbulm_dqKsApjZl8E_f2R_exXADx3yuXQyfMlZdJtXn2dwFP7c3xB6csoATZoG3Ydwy0f3HyOPavsFzy0-VMf53wEyJzZ204YWpJSJAdarmesu6dgHkkyJfkvnWVv2duqpM2pTlRahtJypO0zI0g2gxBuD7oikKLkc_pJ6n7jh"/>
+</div>
+</div>
+<div class="masonry-item">
+<div class="rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A wide shot of a bustling corporate networking event in a brightly lit, glass-walled hotel lobby. Professionals in business attire are seen in blurred motion around sleek white cocktail tables. The architecture features high-polish finishes and clean lines typical of high-modern hospitality design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo60E6DReKq0KvlksEsxGCNXYuUg7g0cAhkxI4xlfH5ctNFLfLFz3LSDVR-qZ1v6PxQxsfDYU3YSCocLBvvo9aQVurSrWcatIlvmVn5dghpR5Wug2XClq62fG8XHs_E-pjiI6v0XWS5tLlMppqkN0uSNeur5_YKUBE0JYmNrpmRR1tdQuGMUVaJ-u0US3K7nUrLJrEVkRhF4rDcVWH-HGpVLxCNa2DOSN7zf4VSyN4oJDsldvx5xVm"/>
+</div>
+</div>
+<div class="masonry-item">
+<div class="rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of artistic gourmet hors d'oeuvres being served on a silver platter. The food is elegantly plated with micro-greens and vibrant sauces, emphasizing the high-end culinary standards of the hotel's catering service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7lCHZHb0KJctdG18udRQvfvn8J5A-cwTBbCUXLI1bPTrWGNhyYRtKsTip_ROqeXcEmANlz6hFtPiPZLMNtppqdsvbutSpZrNZcIgs70GxJGLWQcUPOL54_pk4rwb0FtB8L_ir0I9FTjPa8wvvN5y2cIz6JGicgID-AYiZL_5yuGkQue8iQ-egZfDbSuJfDZfRZSztugn5o1KCUSPl34-4PkyS54hmMIhXY1aWKkaT1zgSIwbkK3Kf"/>
+</div>
+</div>
+<div class="masonry-item">
+<div class="rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A festive luxury birthday celebration with tiered balloons in shades of champagne and white gold against a sleek gray wall. A minimalist cake stands on a gold pedestal, reflecting a balance of celebratory energy and professional design elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_HL-7JsPDOhUPXvs1pvzUgbdF3Z7l430VRWbatJbsAsf2Uj_dhNvpoUKbj0PsggWXSB4wLyPDQ_5LLstSqX61QXTsK6dfMcYLyKvxlDvRzdh8OnRF5igl1CNRKOtOLaQJij8kxhiYJRzoZvntJDA9hghe3ODU4pxyvGOh0_SZiJW6RqOiIpnvrYpH5A3W9BoIqQT04XAbNqTk3u6DUMWAy_UoxdkgODdvnvUXy9IG24rP5VN04TNe"/>
+</div>
+</div>
+<div class="masonry-item">
+<div class="rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-angle shot of a theater-style setup in a banquet hall for a keynote speech. Rows of elegant dark chairs are perfectly aligned on a premium carpeted floor. The front features a minimalist stage with a podium and large LED screen, showing a high-key professional lighting setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCy_W3FEnoIt_p9-XcFZgsxQwFIwrMLRAhLV827-aDiZn1spzVTHTRJiARnZIubHf1WSUsBRFS2qm86pZCRFndvpHxPWh6qzqXw-5Ev1OmrXCnaE5BqAbyiyqTDTRXp4I8m5U-wQQHyt8mUgjBhhd7SjtX0fPH1EOFncbNHMTw4WRU1onw9bhFLhykugdftwmOx75Sa4PXeingsLIP-bCHB_RlMLaAso3VQ8KjU6VIBYQaDpoTuYuY"/>
+</div>
+</div>
+<div class="masonry-item">
+<div class="rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-shadow">
+<img class="w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A grand entrance way to an event hall decorated with delicate hanging crystals and white orchids. The lighting is a cool blue and crisp white, creating an atmosphere of ethereal prestige and 'invisible service' quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAiQu8j8N9ovgqCoEd9Mt4-wCkWRmsgT6vZg4x6AzUuVpb9nd2pfLxamzARkvDXM6X35HazaT8NL08Z2Frjmi6lCyqDD0Nxlf5JZz_CeYG-YDJYZKJWE0zAEE9W-G13R2_gX6e_Y6zrlKnofEQkYFsoEbZaXuj1DErKodxgo9HL5raWkvoZYR9Xm37RarbSLLc7LRyhyLE_9LNxoWrmP3eKQSpYJQ2U0mCz3nkHLapW48ieiWfiutT"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiry Form -->
+<section class="py-24 bg-inverse-surface text-white" id="inquiry">
+<div class="max-w-4xl mx-auto px-6 md:px-16 text-center">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-xl mb-6">Plan Your Event</h2>
+<p class="font-body-lg text-white/70 mb-12">Share your vision with us, and our expert coordinators will get back to you within 24 hours.</p>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 text-left">
+<div class="relative group">
+<label class="font-label-caps text-secondary-fixed mb-2 block">FULL NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-white/30 focus:ring-0 focus:border-secondary-fixed py-2 transition-colors" placeholder="Enter your name" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-secondary-fixed mb-2 block">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-0 border-b border-white/30 focus:ring-0 focus:border-secondary-fixed py-2 transition-colors" placeholder="Email@example.com" type="email"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-secondary-fixed mb-2 block">EVENT TYPE</label>
+<select class="w-full bg-transparent border-0 border-b border-white/30 focus:ring-0 focus:border-secondary-fixed py-2 transition-colors appearance-none">
+<option class="bg-inverse-surface">Wedding</option>
+<option class="bg-inverse-surface">Corporate Meeting</option>
+<option class="bg-inverse-surface">Social Gathering</option>
+<option class="bg-inverse-surface">Other</option>
+</select>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-secondary-fixed mb-2 block">ESTIMATED GUESTS</label>
+<input class="w-full bg-transparent border-0 border-b border-white/30 focus:ring-0 focus:border-secondary-fixed py-2 transition-colors" placeholder="e.g. 150" type="number"/>
+</div>
+<div class="md:col-span-2 relative group">
+<label class="font-label-caps text-secondary-fixed mb-2 block">TELL US MORE</label>
+<textarea class="w-full bg-transparent border-0 border-b border-white/30 focus:ring-0 focus:border-secondary-fixed py-2 transition-colors" placeholder="Additional details or special requirements..." rows="3"></textarea>
+</div>
+<div class="md:col-span-2 flex justify-center mt-6">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-12 py-4 rounded-full font-bold font-label-caps hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,224,136,0.2)]" type="submit">
+                        SEND INQUIRY
+                    </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-inverse-surface text-on-primary-fixed border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-lg text-headline-md text-surface mb-6">AVN Grand</div>
+<p class="text-surface-variant opacity-80 text-sm mb-6">Redefining luxury and professional hospitality in the heart of Ranchi.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary-fixed">face_nod</span>
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary-fixed">photo_camera</span>
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary-fixed">alternate_email</span>
+</div>
+</div>
+<div>
+<h5 class="text-surface font-label-caps mb-6">RESOURCES</h5>
+<ul class="space-y-4">
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Rooms</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Restaurant</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Events</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Gallery</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface font-label-caps mb-6">LEGAL</h5>
+<ul class="space-y-4">
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Terms of Use</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface font-label-caps mb-6">NEWSLETTER</h5>
+<p class="text-surface-variant opacity-80 text-sm mb-4">Subscribe for exclusive event offers.</p>
+<div class="flex border-b border-white/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-white text-sm w-full" placeholder="Your Email" type="email"/>
+<button class="text-secondary-fixed font-bold font-label-caps">JOIN</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-surface-variant opacity-60">
+<p>© 2024 Hotel AVN Grand. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a href="#">Sitemap</a>
+<a href="#">Credits</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form inputs
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.previousElementSibling.style.letterSpacing = '0.2em';
+                input.previousElementSibling.style.transition = 'all 0.3s ease';
+            });
+            input.addEventListener('blur', () => {
+                input.previousElementSibling.style.letterSpacing = '0.1em';
+            });
+        });
+
+        // Simple scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

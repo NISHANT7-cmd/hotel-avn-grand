@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Restaurant &amp; Dining | AVN Grand</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9ff",
+                    "outline": "#76777d",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-tertiary-fixed-variant": "#454746",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#bec6e0",
+                    "surface-tint": "#565e74",
+                    "on-surface": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-bright": "#f8f9ff",
+                    "outline-variant": "#c6c6cd",
+                    "on-background": "#0b1c30",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary-container": "#745c00",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "primary-container": "#131b2e",
+                    "tertiary-fixed-dim": "#c6c7c5",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#000000",
+                    "surface": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary-container": "#1a1c1b",
+                    "secondary-fixed": "#ffe088",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "secondary": "#735c00",
+                    "on-primary-container": "#7c839b",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#e2e3e1",
+                    "secondary-container": "#fed65b",
+                    "on-tertiary-container": "#838483",
+                    "on-tertiary-fixed": "#1a1c1b",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-high": "#dce9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(115, 92, 0, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-item-active { border-bottom: 2px solid #735c00; color: #735c00; font-weight: 700; }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl dark:bg-surface-container-lowest/70 border-b border-outline-variant/20 shadow-sm transition-all duration-300">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed cursor-pointer">
+                AVN Grand
+            </div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface dark:text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface dark:text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-300" href="#">Rooms</a>
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary font-body-md text-body-md" href="#">Restaurant</a>
+<a class="text-on-surface dark:text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-300" href="#">Banquet</a>
+<a class="text-on-surface dark:text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-300" href="#">Gallery</a>
+<a class="text-on-surface dark:text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-300" href="#">Amenities</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps text-label-caps tracking-widest scale-95 active:opacity-80 transition-all hover:bg-secondary">
+                Book Your Stay
+            </button>
+</nav>
+</header>
+<main class="pt-0">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A cinematic, low-angle shot of a luxurious high-end restaurant dining room at dusk. Large floor-to-ceiling windows reveal a soft city glow. Inside, crystal chandeliers cast warm, shimmering light onto impeccably set tables with white linen, gold cutlery, and sparkling wine glasses. The atmosphere is sophisticated and serene, with a color palette of deep navy, champagne gold, and ivory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPNmFNPmZa23nyAhD3ItLdQL_qmMmi9Kketv-cT6Tu7IvWj5kx9KqsJjEgX0bKIeNGHuC-Y5Ypmz3CjDL8Q7vlf2016Blsb00lwbFA5G9h_1yChQIcWI7L1ueYhYtyXeU3gBunq_4XFLcAljXCHDTgax5vkSeJqJ5AqbOj0UyJ8ao3lL6EeBEXVFNPIVniRAjbA-qemFJqWssbYMSO033JeyqitkzjTSw8BBDCZjqi2PAwC39Q1Vd-"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full text-white">
+<div class="max-w-3xl space-y-6">
+<span class="font-label-caps text-label-caps tracking-[0.3em] uppercase text-secondary-fixed animate-fade-in">Exquisite Flavors</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">Culinary Excellence</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl">Experience a journey of taste where global inspirations meet local tradition in an atmosphere of unparalleled elegance.</p>
+<div class="pt-4">
+<a class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-full font-label-caps text-label-caps tracking-widest inline-block hover:bg-white transition-all transform hover:-translate-y-1" href="#reserve">Reserve A Table</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Highlights (Bento Style) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-display-lg text-headline-xl text-primary">Signature Menus</h2>
+<div class="h-1 w-24 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Breakfast - Large horizontal -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A lavish breakfast spread on a marble table featuring freshly baked golden croissants, a bowl of vibrant seasonal berries, artisanal sourdough toast with avocado, and steaming porcelain cups of latte. The morning sun streams in from the side, creating long, soft shadows and highlighting the steam from the coffee. The style is bright, clean, and airy, evoking high-end hospitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2husf-VuF9t2O_H4XiqMIs2q3xhVj5Pu14o01qDUH772EK5-pxKYC2W4TMKRuXEWmpba01LbZEkjm2TVNr-8gCuhB-PzIHrtZDVo9OsLno8YrLjSY-I_MurcKJROZIfRUoYSjJDAP-UdKKf6Hh0nEhq19Vd4UqpajOhk5bjG8Ca6Xj2Od4T0UgF9BNa5uOPyBYVlHC7qXn1kvBZw2kG4dlSmhUWMPHLUhTL6v0lZn4-Lzo4oFCslG"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-8 text-white">
+<h3 class="font-display-lg text-headline-md mb-2">Morning Radiance Breakfast</h3>
+<p class="text-body-md opacity-90 max-w-lg mb-4">Start your day with an array of artisanal pastries, tropical fruits, and made-to-order classics.</p>
+<span class="font-label-caps text-label-caps border-b border-white w-max pb-1">View Breakfast Menu</span>
+</div>
+</div>
+<!-- Fine Dining - Tall -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[400px] md:h-auto">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A meticulously plated fine dining dish featuring a seared scallop topped with gold leaf and micro-greens, resting on a bed of vibrant beetroot puree. The plate is charcoal gray ceramic, and the lighting is dramatic, pinpoint-focused to create a high-contrast, artistic culinary photograph. The setting suggests an exclusive dinner environment with a deep navy and gold aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8UOoh_yOvmQ3ox7kzrVnbteC-L4HDZO1WciE8rasoIDjStlyPTXytxj1uIN1cNItxW-2ovC5PVaPtXP1kSAvs8fwtDop_U_nEX0ORTbGhsBbEMbfi1rqxUykEgSYYePDkqNFQMsWhkry8lUL7i2Oj35W3mgzRBfL7DhVWVT69fr--8R42bqYKgwyKAlUc-Zrcz_CQcZn1xlrcnin7ZPS4jDV7HlsDu6uWMZqeWtPW49i9U9IoqNdh"/>
+<div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8 text-white">
+<h3 class="font-display-lg text-headline-md mb-2">The Grand Dinner</h3>
+<p class="text-body-md opacity-90 mb-4">A curated multi-course journey designed by our master chefs.</p>
+<span class="font-label-caps text-label-caps border-b border-white w-max pb-1">Explore Fine Dining</span>
+</div>
+</div>
+<!-- Lunch - Square -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-xl h-[350px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A vibrant multi-cuisine lunch spread with a variety of colorful dishes including a fresh Mediterranean salad, gourmet sliders, and authentic Indian curries in copper bowls. The table is made of light rustic wood, and the setting is bright and casual yet upscale. Soft midday light fills the frame, highlighting the textures of the food and fresh herbs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA92suJUU4aCW0Zt_IttWr4Cv-ceExu7Jvbo2fwMv7JHRbL_XqmMJedkRhxr2SzQxleybfwwb0oLeEuZSZKfnqEIbdgKjzmyd4LsYF7hU98rb1nXrB8xBK-Gx5URvJfpCTkT7t76z1Z28IPDVKPRnI_HhFPQrmVGkeHJgYpaLfQHS7mf22hHCdZOMB-Z_XiQ3T12ubXWksoElpezphThUuT2GSkrFODMLnOVVdSXAPKa8CnjyxeJr8k"/>
+<div class="absolute inset-0 bg-black/30 flex flex-col justify-end p-8 text-white">
+<h3 class="font-display-lg text-headline-md mb-2">Global Fusion Lunch</h3>
+<p class="text-body-md opacity-90 mb-4">From local favorites to international delicacies, perfect for business or leisure.</p>
+</div>
+</div>
+<!-- Bar - Square -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-xl h-[350px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up of a premium hotel bar at night. A bartender's hand is seen pouring a crystal-clear cocktail into a chilled coupe glass. The background is a blur of backlit amber liquor bottles and warm decorative lights. The scene is elegant and moody, with reflections of gold and deep wood tones throughout the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBazLQ7l0wC4VHZ6ripTnV6ATa27agcua3lTjIJZ_kAyVouDzjkupEPPSdSc2YITpG0KVDtK1mRoFLmJjCCuKH64SLNFEJTX7wwlO_WgtB2l8FdsWW4k56mDTuIJzZ9xvbprUviw9B_HGkZ5kMLz_qtXgXq0jadQ2YYiowokIStnBLwwoRVAWdaXi6hUYagTWy9Yws_J2r6MUR0VdUsohoP3IGYkqlA2Vqk__T6wPcqF7Upp9t7xzy0"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-8 text-white">
+<h3 class="font-display-lg text-headline-md mb-2">The Gilded Bar</h3>
+<p class="text-body-md opacity-90 mb-4">Masterfully crafted cocktails and a selection of the world's finest labels.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features & Service Section -->
+<section class="bg-surface-container py-24 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="p-8 bg-white rounded-xl shadow-sm border border-outline-variant/10 space-y-4 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-4xl text-secondary">room_service</span>
+<h4 class="font-display-lg text-headline-md">24/7 Room Service</h4>
+<p class="text-body-md text-on-surface-variant">Indulge in our full restaurant menu from the comfort and privacy of your own room, anytime day or night.</p>
+</div>
+<div class="p-8 bg-white rounded-xl shadow-sm border border-outline-variant/10 space-y-4 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-4xl text-secondary">event_seat</span>
+<h4 class="font-display-lg text-headline-md">Event Catering</h4>
+<p class="text-body-md text-on-surface-variant">From intimate gatherings to grand galas, our culinary team provides bespoke menus tailored to your occasion.</p>
+</div>
+<div class="p-8 bg-white rounded-xl shadow-sm border border-outline-variant/10 space-y-4 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-4xl text-secondary">celebration</span>
+<h4 class="font-display-lg text-headline-md">Private Dining</h4>
+<p class="text-body-md text-on-surface-variant">Host your special moments in our exclusive private suites, featuring dedicated servers and personalized decor.</p>
+</div>
+</div>
+</section>
+<!-- Reservation Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="reserve">
+<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+<div class="space-y-8">
+<span class="font-label-caps text-label-caps tracking-[0.2em] text-secondary">Reservations</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-primary">Secure Your Table at Ranchi's Finest</h2>
+<p class="text-body-lg text-on-surface-variant">Join us for an unforgettable evening. We recommend booking in advance to ensure your preferred seating and any special requirements.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">call</span>
+<span class="font-body-md">+91 651 234 5678</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<span class="font-body-md">dining@avngrand.com</span>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-2xl shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<form class="space-y-6 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline uppercase">Guest Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all py-2 text-body-md" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline uppercase">Number of Guests</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all py-2 text-body-md">
+<option>1 Person</option>
+<option selected="">2 People</option>
+<option>4 People</option>
+<option>6+ People</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline uppercase">Date</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all py-2 text-body-md" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline uppercase">Time</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all py-2 text-body-md" type="time"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline uppercase">Special Occasion/Requests</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all py-2 text-body-md h-24" placeholder="Birthday, Anniversary, Allergies..."></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-caps text-label-caps tracking-widest hover:bg-secondary transition-colors uppercase" type="submit">Confirm Reservation</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-24 bg-surface-bright">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="font-label-caps text-label-caps tracking-widest text-secondary">Visual Journey</span>
+<h2 class="font-display-lg text-headline-xl text-primary">Atmosphere &amp; Artistry</h2>
+</div>
+<a class="font-label-caps text-label-caps text-secondary border-b border-secondary pb-1 flex items-center gap-2" href="#">
+                        View Full Gallery <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="space-y-4">
+<div class="rounded-xl overflow-hidden h-48">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a perfectly seared steak, glistening with a dark herb butter glaze and garnished with rosemary. The lighting is warm and directional, emphasizing the rich texture of the meat and the crispness of the garnish. High-end luxury food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6UwYUQ0O0e0hQLXqa9e14mcx3XCt9pXH3JE550kd3nBmtt4YUWrzwygn2Q6yocrDWzd0bvbZOofoCw-3Z5RK6_kt7s5loDNONP4IWUeBTTeK6aYROwS3SD_SYN_ppAzcapVlC1x9kactTCSENld6xpdwCcmLLAZN-zaJTx7E9m_GGEGssrLTpbWrMXKlVYOdmHxsFbQBlE9q84ArDmUBabyZ7fYrft1BYk2XDNpYYUdBpfL7vq7CA"/>
+</div>
+<div class="rounded-xl overflow-hidden h-72">
+<img class="w-full h-full object-cover" data-alt="A wide interior view of the AVN Grand restaurant bar area. Modern velvet stools sit against a dark wood bar with brass accents. Architectural lighting creates a pattern on the ceiling. The space feels moody, luxurious, and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo3RlzKRIFWnS91bubTFMihKPQWrGFvP0ahnnuE98RQ8JSfIzMOol9ovPxaAL5ijJ_uWgArd8LDBmsZag_QZmWzMNuLepr26gEFbS7W5swvkY5wCTr6BZhuPK8d0FvA6r89ZCYzmqjrJT0EaKPlBjFcm301at8X7volRJAclS8zuqur81_Ceamv2_A5zMNPFte0wvgEf2_I9_c6HcZY9XuKwvzKRNOx1rSpY21RY_NubQsqN-sBgB1"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="rounded-xl overflow-hidden h-72">
+<img class="w-full h-full object-cover" data-alt="Close-up of a person pouring red wine into an elegant crystal glass. The deep red liquid swirls, catching the light from a nearby candle. The background is softly blurred, suggesting an intimate dinner setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDnYujAsNGZMvxZOUr504p9_jrlYLWJKjDEiPdiwDT6U0IdTi3NmQPjKHxZekpVnzMpABGxNoJNtP1pjWiL4mRQPOr8FImugVg4qn9lJ2TvIHODk6mUPRM41wKMhB_ZHQwrZcszpxyy7ISgpfnbr51ek11c2N1g_jpjNlhA9YH755VU7_BG7Se0COm-Z9_4fIJ4TfEiz8T02QW0YZYEtLjJ7O1ZkWaNNF6Yt_yYofYXfnjoo4rMiFf"/>
+</div>
+<div class="rounded-xl overflow-hidden h-48">
+<img class="w-full h-full object-cover" data-alt="A colorful assorted dessert plate featuring miniature éclairs, fruit tarts, and dark chocolate truffles, beautifully arranged on a white porcelain platter with raspberry coulis drizzles. Bright, clean lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAurGtH29a1zI_ZArhP__Ueg5MPNyc3fw8kWZmSoPdMUGmvlPbD9svQtiL-Ts3d2vlPKaZSOmg8Di9KhqXmIBEbR99PoqjfPPyNUwPgCBa0anzQP1d-K95KkWeuZZM6qyZUrkWfuwOfxocaFY9ajGyhSr1EFlHIghr74RJFgAAunYkCidRLO5_yS0xH4i_dvnq3bvvwtPMxqYPd6o_chOBTeOcx32FjMpuR8mPlPbzFfMAABmZGj9md"/>
+</div>
+</div>
+<div class="hidden md:block space-y-4 pt-12">
+<div class="rounded-xl overflow-hidden h-64">
+<img class="w-full h-full object-cover" data-alt="An overhead view of a diverse selection of artisanal breads and whipped butters on a rustic board. Textural details of the crust and the soft butter are highlighted by natural side lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHNzGsnj4tuVK7mzFVLh4uu2MTiztQMjpzHWiY9e87Uo6GsekQG9_Qe_e66s8ZOBbobOiJVqnp2N3F5vmfhiVsNc9uTplPejQYbIuVQlcrz5W_j5iFzfEIkhRZHcxsMGCRaZ_8-x-ERi5n3-kKeGQIpExSsIfyltFk9s3tGsASjvVQX-Ty6jDSfIo0E_7G6e0-FgOE3Qgof4k4V3PWi8sDrrTPyO3O_C8y5Gu9HDgPfJTU_293a6Uv"/>
+</div>
+<div class="rounded-xl overflow-hidden h-56">
+<img class="w-full h-full object-cover" data-alt="A chef in a white uniform carefully garnishing a plate with tweezers in a professional kitchen. The background is a blur of stainless steel and warm kitchen lights, conveying focus and expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAMSoo6azCFLD7hnrcPnyD6b33qCPuRUxKJmE2HYDmSo7Db7axWesJVv1svcy-O67KXsKu1GV223sRdWk2fdGpaAXRgw2UUOUpMv65poLYl-r_2I4_L0bukHjJs9Jy5o2RkxQVoUzzSyL_8YcZf9_sEXDDfOtvWMoQjTUx88_LzS95QKcrH2_pOQSs7_fK_7_Zv8xasHWWQ3sXbfZvzoS4ameYfw_iANDJYhPJ7Pnmsv0OHAxJW7eX"/>
+</div>
+</div>
+<div class="hidden md:block space-y-4">
+<div class="rounded-xl overflow-hidden h-56">
+<img class="w-full h-full object-cover" data-alt="A bright morning shot of the restaurant's outdoor terrace, with white umbrellas and wicker chairs. Potted lush green plants surround the area, creating a fresh and peaceful breakfast spot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcUGZ1br67gx3nghWkvzK7Gi1z9Dh0EBIE7p_zulwAFjA8CbvqiEgVMyr41rCFeNfUQ6qCdnQ1mS6j-N0uvH_fgM_e9HawyggPc0d1HasKCYKzLqSiyrWB8R69EqEVjKBQ1cqt0TyzvzA2VCeqU3xhgirEALJe5XxdCM6GUoQQp9wv4aJmbB_kBe74hRaWq7hixU5LJhv2QOtkXAV-Ypu-wB6F16wLACR9WtQFmymBr8K4Kqc6UWNe"/>
+</div>
+<div class="rounded-xl overflow-hidden h-64">
+<img class="w-full h-full object-cover" data-alt="A beautifully layered espresso martini in a glass with three coffee beans on top. The foam is thick and creamy, and the lighting is dramatic, typical of a high-end late-night lounge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKK-AXAqy7ZJT3ZrvUEqxwKrhqWsZd3DLCzhMIFSBCBvDexalt37FZ1bScTQ749JuPSMIIKq8vMREqwYfbYPiMnRzSO9WoRULZGTj3p5Z34RiELdHbQNKrVEv49T2i-7Oe3gYOQYIDkZqHf45PwtY4A9TOSLj705D9hbG7N5_8n5jcS8OVYoX8kH9-M8XHtlNtpAJrpyAx79tQ1s_VezFRD0KzAoh-obkCO928KPrFy6NvmfbbtcvM"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-on-primary-fixed dark:text-primary-fixed-dim w-full pt-20 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-display-lg text-headline-md text-surface dark:text-primary-fixed">AVN Grand</div>
+<p class="text-surface-variant opacity-80 text-body-md">Redefining hospitality in Ranchi with a perfect blend of modern comfort and timeless luxury.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="text-secondary-fixed font-bold text-lg mb-6">Quick Links</h5>
+<ul class="space-y-3">
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Rooms</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Restaurant</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Events</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Gallery</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-secondary-fixed font-bold text-lg mb-6">Information</h5>
+<ul class="space-y-3">
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Policies</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Careers</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Contact Us</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed transition-opacity" href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-secondary-fixed font-bold text-lg mb-6">Location</h5>
+<p class="text-surface-variant opacity-80 text-body-md">Main Road, Near Overbridge, Ranchi, Jharkhand 834001</p>
+<div class="rounded-lg overflow-hidden h-32 w-full grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<img class="w-full h-full object-cover" data-location="Ranchi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5mMWIx4AiuqeXOMkpRFxIPKQt6yhM8_527MYRN0G20pOypiADeOEEj-YwwCRrp_SGU3GeOOCuSCtp7mcO1WbSMoqZOgyRBBujMFJ_C8K80dxeAAXsup2PKQmyGaowCr4qhDz_sQh6crzrdmfo1mQ4OJSRd1R_AP7j__JvqJ3hqR_Pl_frmVpAAUoN2TigI-9bKOQu_pZK0BgRmzGSEBd9cGlKLFkvuSKDU8sjgmyBOs5Yk-wxAM6Q"/>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-10 border-t border-surface-variant/10 text-center">
+<p class="text-surface-variant opacity-60 text-body-md font-body-md">© 2024 Hotel AVN Grand. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // Micro-interactions for reservation form
+        const formInputs = document.querySelectorAll('input, select, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.previousElementSibling.classList.add('text-secondary');
+            });
+            input.addEventListener('blur', () => {
+                input.previousElementSibling.classList.remove('text-secondary');
+            });
+        });
+    </script>
+</body></html>

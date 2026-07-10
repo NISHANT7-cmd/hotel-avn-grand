@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rooms &amp; Suites | AVN Grand</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9ff",
+                    "outline": "#76777d",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-tertiary-fixed-variant": "#454746",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#bec6e0",
+                    "surface-tint": "#565e74",
+                    "on-surface": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-bright": "#f8f9ff",
+                    "outline-variant": "#c6c6cd",
+                    "on-background": "#0b1c30",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary-container": "#745c00",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "primary-container": "#131b2e",
+                    "tertiary-fixed-dim": "#c6c7c5",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#000000",
+                    "surface": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary-container": "#1a1c1b",
+                    "secondary-fixed": "#ffe088",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "secondary": "#735c00",
+                    "on-primary-container": "#7c839b",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#e2e3e1",
+                    "secondary-container": "#fed65b",
+                    "on-tertiary-container": "#838483",
+                    "on-tertiary-fixed": "#1a1c1b",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-high": "#dce9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hover-scale img {
+            transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .hover-scale:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl dark:bg-surface-container-lowest/70 border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed" href="#">AVN Grand</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary hover:text-secondary transition-colors duration-300" href="#">Rooms</a>
+<a class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Restaurant</a>
+<a class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Banquet</a>
+<a class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Amenities</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-caps tracking-widest scale-95 active:opacity-80 transition-all hover:bg-on-surface-variant">
+                BOOK YOUR STAY
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A sprawling luxury hotel suite with floor-to-ceiling windows overlooking a sunset cityscape. The room is decorated in a sophisticated palette of deep navy, gold, and warm cream, with plush velvet furniture and marble surfaces. Soft, warm ambient lighting illuminates the elegant space, creating an atmosphere of high-modern hospitality and prestige." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7F9h46TdJKGG9chT2XDWaVvXMQplvHE0dJIH4TpYOXV4hgNPPkWNc0IMLhQo3a6Gr_2SZLM63ZhaqBj3ZSi-7cn_22XjNn9vLZmHGEm5h9DFlWgRSz28K_jxOpLMxvWWNxd5Y4QeHyHvW22kfu2kRS-oY94PA09gcnIeTx-_ufU9POZHehyBw7jwaVr1525cxIeqC3RaB9ajxIZf0xiKcCTzBAoyEs-jgordr-BBM5YB-TD1LI0ze')"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 text-center text-white px-margin-mobile">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-4">Refined Comfort</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto opacity-90">Experience the pinnacle of luxury in Ranchi. Every detail curated for the modern traveler seeking a blend of heritage and contemporary elegance.</p>
+</div>
+</section>
+<!-- Room Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-caps text-secondary tracking-[0.2em] mb-4 block">OUR ACCOMMODATIONS</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl">Suites for Every Journey</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Deluxe Room -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 hover-scale">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A bright and airy Deluxe Hotel Room featuring a queen-sized bed with crisp white linens and navy blue accent pillows. Modern minimalist furniture in light wood and a dedicated workspace create a functional yet stylish environment. Large windows let in natural morning light, highlighting the clean textures and sophisticated design of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBA2eL-EP28hjR0mLt2zreT-oCzN7_5l_OzFQAjSk26J1jjjejGBmca-Fb9e-RXfMxU_6zRURcehhMWkuDaG6inSg8RkX86qljKZhgff7dSqpfRpfH22gRziFhOffvyAp8zi-JqZESeD7YG1YjHg0jjH1_5xkJXak8GRqfVJ-0KpXTirFtJn3DtaqCqPa0FJ76pOhTlFpHfvWIHh1HkOkek5GNhpQ-11CRPvcJ4CjWd6nMGuYs7Hyr"/>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-md text-white px-4 py-1 rounded-full font-label-caps">FROM ₹4,500</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md mb-2">Deluxe Room</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-2">Perfect for business travelers, combining efficient workspace with premium relaxation.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">wifi</span>
+<span class="text-xs font-label-caps">Free WiFi</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">ac_unit</span>
+<span class="text-xs font-label-caps">Central AC</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">smart_display</span>
+<span class="text-xs font-label-caps">Smart TV</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">room_service</span>
+<span class="text-xs font-label-caps">24/7 Service</span>
+</div>
+</div>
+<button class="w-full border border-secondary text-secondary py-3 rounded-lg font-label-caps tracking-widest hover:bg-secondary hover:text-on-secondary transition-all">
+                            BOOK NOW
+                        </button>
+</div>
+</div>
+<!-- Executive Room -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 hover-scale">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An Executive Hotel Room with a king-sized bed and a luxurious velvet headboard. The interior features gold accents, dark wood paneling, and an elegant seating area with a leather armchair. Dramatic architectural lighting creates a moody, premium atmosphere suitable for discerning corporate executives and luxury seekers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdZcE6rglpXHGQdoRXJw4ExkzaYY7zn7AC96XiX3dQQVPbWaldfjdPXTSPeXsiGNcoy6-uvObchP-D2kx8tdJbxpr__U8oGQtIDN-4-vciquu23SJpsXvAj1MO3gQjowVq2wnA7dV9IBE4-VJ0fw5LA11O6AsNug-NLV8ZchzA0xfAQpDJ5Q28Iher0lK7JC_nn-OShSv2Y0RlhV6f69GcNls0Dey4t_2aVa9GNlOmgXEgDLxZrt-b"/>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-md text-white px-4 py-1 rounded-full font-label-caps">FROM ₹6,200</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md mb-2">Executive Room</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-2">Enhanced space and exclusive amenities for a truly elevated stay experience.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">wifi</span>
+<span class="text-xs font-label-caps">Free WiFi</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">ac_unit</span>
+<span class="text-xs font-label-caps">Central AC</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">smart_display</span>
+<span class="text-xs font-label-caps">Smart TV</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">room_service</span>
+<span class="text-xs font-label-caps">24/7 Service</span>
+</div>
+</div>
+<button class="w-full border border-secondary text-secondary py-3 rounded-lg font-label-caps tracking-widest hover:bg-secondary hover:text-on-secondary transition-all">
+                            BOOK NOW
+                        </button>
+</div>
+</div>
+<!-- Premium Suite -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 hover-scale">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A palatial Premium Hotel Suite with a separate living area, marble-topped coffee table, and an expansive bedroom. The design is airy and light-mode focused, using soft gray and champagne tones. Large glass windows offer a panoramic view, while intricate gold details on the ceiling and walls add a touch of traditional prestige to the modern minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj3uEip0JcsLd98oY9VqmaUO-kcRAeGxJj77Y3gkT96Z3UH8e6kv2XEjSiXMAF3TfgocI9M9q4tNWK_vhlKeGPWrNZ3eBMfftA1qsYj9fR4BB6qe9n8YThJcBLJKL19MFpAzyKD07OHZ10fhAK3VrnWZsbqmYkqtnJejIyCcoZ1tCA-EKtK6FR7GykX_QoHYiaHnBVVZ7TIyQt5OWnvcu29p65kDkLkv84iER_jky0KlX6AVvQXu9m"/>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-md text-white px-4 py-1 rounded-full font-label-caps">FROM ₹9,500</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md mb-2">Premium Suite</h3>
+<p class="text-on-surface-variant mb-6 line-clamp-2">Our most prestigious accommodation featuring separate living quarters and panoramic views.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">wifi</span>
+<span class="text-xs font-label-caps">Free WiFi</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">ac_unit</span>
+<span class="text-xs font-label-caps">Central AC</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">smart_display</span>
+<span class="text-xs font-label-caps">Smart TV</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-xl">room_service</span>
+<span class="text-xs font-label-caps">24/7 Service</span>
+</div>
+</div>
+<button class="w-full border border-secondary text-secondary py-3 rounded-lg font-label-caps tracking-widest hover:bg-secondary hover:text-on-secondary transition-all">
+                            BOOK NOW
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Offers: Glassmorphism -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary-container/20 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary-container/10 blur-[100px] rounded-full"></div>
+<div class="glass-card relative z-10 p-12 md:p-20 rounded-3xl border border-white/40 flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<span class="font-label-caps text-secondary tracking-widest mb-4 block">LIMITED TIME</span>
+<h2 class="font-display-lg text-headline-xl mb-6">Seasonal Escape</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">Unlock exclusive rates up to 25% off when you book a stay of three nights or more. Includes complimentary airport transfer and breakfast at our signature restaurant.</p>
+<a class="inline-flex items-center gap-4 bg-primary text-white px-8 py-4 rounded-full font-label-caps hover:bg-secondary transition-colors" href="#">
+                            REDEEM OFFER
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A beautifully presented luxury hotel breakfast scene on a sunny balcony. Freshly baked pastries, exotic fruits, and artisanal coffee are arranged on a white linen tablecloth with refined silverware. The background shows a soft-focus garden, and the lighting is bright, airy, and inviting, capturing the essence of a serene 'Seasonal Escape' vacation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG6s1SGgsJkccEyFZmxlAyZd4njoRe9WlM3b3AMFzjDrLn_1lbQ4An5_jnoTXYBkNzMBgQrOITHfleLYVQgrcrOE13eW_64G7r6JsCBBUHbG65m5EfqgOqd1Ab-JW_c8VwcDzbgFgiu3iq-CNp5vGHlD2Su-DMOnkeZ0B5A_BenPL4e0nfJo9PF5fPd9ybiBfJsNKIdKplj1hDZ_RW8A-oWdTNdbhVxPXYTCl7xBqsQ8A0mdbxk864"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Table -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-xl">Feature Comparison</h2>
+<p class="text-on-surface-variant mt-4">Find the perfect balance for your stay requirements.</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="border-b border-outline-variant">
+<th class="p-6 text-left font-label-caps text-outline">FEATURES</th>
+<th class="p-6 text-center font-display-lg text-headline-md">Deluxe</th>
+<th class="p-6 text-center font-display-lg text-headline-md">Executive</th>
+<th class="p-6 text-center font-display-lg text-headline-md">Premium</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30">
+<tr>
+<td class="p-6 font-body-md font-semibold">Room Size</td>
+<td class="p-6 text-center text-on-surface-variant">280 sq.ft.</td>
+<td class="p-6 text-center text-on-surface-variant">350 sq.ft.</td>
+<td class="p-6 text-center text-on-surface-variant">520 sq.ft.</td>
+</tr>
+<tr>
+<td class="p-6 font-body-md font-semibold">Bed Type</td>
+<td class="p-6 text-center text-on-surface-variant">Queen</td>
+<td class="p-6 text-center text-on-surface-variant">King</td>
+<td class="p-6 text-center text-on-surface-variant">Grand King</td>
+</tr>
+<tr>
+<td class="p-6 font-body-md font-semibold">Living Area</td>
+<td class="p-6 text-center"><span class="material-symbols-outlined text-outline">close</span></td>
+<td class="p-6 text-center text-on-surface-variant">Seating Nook</td>
+<td class="p-6 text-center text-on-surface-variant">Separate Suite</td>
+</tr>
+<tr>
+<td class="p-6 font-body-md font-semibold">Mini Bar</td>
+<td class="p-6 text-center text-on-surface-variant">Standard</td>
+<td class="p-6 text-center text-on-surface-variant">Premium Selection</td>
+<td class="p-6 text-center text-on-surface-variant">Fully Inclusive</td>
+</tr>
+<tr>
+<td class="p-6 font-body-md font-semibold">Bath Concept</td>
+<td class="p-6 text-center text-on-surface-variant">Walk-in Shower</td>
+<td class="p-6 text-center text-on-surface-variant">Shower &amp; Vanity</td>
+<td class="p-6 text-center text-on-surface-variant">Luxury Tub &amp; Shower</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest w-full pt-20 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<a class="font-display-lg text-headline-md text-surface dark:text-primary-fixed" href="#">AVN Grand</a>
+<p class="text-surface-variant opacity-80 font-body-md">Ranchi's premier destination for luxury hospitality, blending modern elegance with timeless service.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-secondary-fixed mb-2">QUICK LINKS</span>
+<a class="text-surface-variant opacity-80 font-body-md hover:text-secondary-fixed transition-opacity" href="#">Rooms</a>
+<a class="text-surface-variant opacity-80 font-body-md hover:text-secondary-fixed transition-opacity" href="#">Restaurant</a>
+<a class="text-surface-variant opacity-80 font-body-md hover:text-secondary-fixed transition-opacity" href="#">Events</a>
+<a class="text-surface-variant opacity-80 font-body-md hover:text-secondary-fixed transition-opacity" href="#">Gallery</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-secondary-fixed mb-2">POLICIES</span>
+<a class="text-surface-variant opacity-80 font-body-md hover:text-secondary-fixed transition-opacity" href="#">Privacy Policy</a>
+<a class="text-surface-variant opacity-80 font-body-md hover:text-secondary-fixed transition-opacity" href="#">Terms of Service</a>
+<a class="text-surface-variant opacity-80 font-body-md hover:text-secondary-fixed transition-opacity" href="#">Cancellation Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-secondary-fixed mb-2">CONTACT</span>
+<p class="text-surface-variant opacity-80 font-body-md flex items-center gap-3">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                    Main Road, Ranchi, Jharkhand
+                </p>
+<p class="text-surface-variant opacity-80 font-body-md flex items-center gap-3">
+<span class="material-symbols-outlined text-sm">call</span>
+                    +91 651 223 3445
+                </p>
+<div class="flex gap-4 mt-4">
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center text-surface-variant hover:border-secondary-fixed hover:text-secondary-fixed transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-surface-variant/10">
+<p class="text-surface-variant opacity-50 font-label-caps text-center md:text-left">© 2024 Hotel AVN Grand. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth reveal of elements on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>
